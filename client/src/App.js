@@ -1,4 +1,5 @@
 import './App.css';
+import SpeechRec from './SpeechRec';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
           If you know the password then speak, friend, and enter...
         </p>
 
+        < SpeechRec />
       </header>
     </div>
   );
