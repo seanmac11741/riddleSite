@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Sean section
+- to run just this docker image
+```bash 
+docker build -t react-image .
+docker run -d -p 3000:3000 --name react-app  react-image
+#to get into the docker container: 
+docker exec -it react-app bash
+#to setup bind mounts
+docker run -v /home/sheen/websites/riddleSite/client/src:/client/src -d -p 3000:3000 --name react-app  react-image 
+#full single dockerfile command 
+docker run --env-file ./.env -v /home/sheen/websites/riddleSite/client/src:/client/src:ro -d -p 3000:3000 --name react-app  react-image 
+```
