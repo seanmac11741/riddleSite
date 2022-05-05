@@ -9,6 +9,7 @@ function App() {
         <p>
           If you know the password then speak, friend, and enter...
         </p>
+        <p>{console.log(`React name: ${process.env.REACT_APP_NAME}`)}</p>
 
         < SpeechRec />
       </header>
