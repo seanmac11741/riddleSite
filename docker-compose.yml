@@ -1,11 +1,13 @@
-#anything that is common between every instance goes in this file 
 version: "3"
 services:
   client:
     container_name: client
-    # build:
-    #   context: ./client
-    #   dockerfile: Dockerfile.dev
-
-    # env_file:
-    #   - ./client/.env
+    #todo I think that the images need to be unique per container 
+    image: seanmac11741/riddlesite:latest
+    build:
+      context: ./client
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"
+    env_file:
+      - ./client/.env
