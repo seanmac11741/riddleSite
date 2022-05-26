@@ -3,6 +3,7 @@
 ## A website where you must speak to enter 
 - [x] proof of concept 
 - [x] deploy to AWS 
+- [ ] Get ssl working and setup 
 - [ ] setup CI/CD all the way to AWS with Jenkins I think?
 - [ ] create rest api for storing riddles 
 - [ ] mongo db on the backend for storing riddles 
@@ -15,12 +16,17 @@ docker-compose -f docker-compose-dev.yml up -d --build
 ```
 - To run production build and test locally run:
 ```bash 
-docker compose up --build
+docker-compose -f docker-compose-prodLocal.yml up --build -d
 ```
 
 - To hard reset all things docker... 
 ```bash 
 docker system prune -a --volumes
+```
+
+- To tail logs from docker-compose containers: 
+```bash 
+docker-compose logs -f -t
 ```
 
 ### Deploy to AWS ECS 
