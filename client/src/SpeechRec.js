@@ -11,7 +11,7 @@ const SpeechRec = () => {
         browserSupportsSpeechRecognition
     } = useSpeechRecognition();
 
-    const answer = 'mellon';
+    const answer = 'powerline';
 
     if (!browserSupportsSpeechRecognition) {
         return <span>Browser doesn't support speech recognition.</span>;
@@ -20,8 +20,8 @@ const SpeechRec = () => {
     return (
         <div>
             <p>Microphone: {listening ? 'on' : 'off'}</p>
-            <button onClick={resetTranscript && SpeechRecognition.startListening}>Start</button>
-            <button onClick={SpeechRecognition.stopListening}>Stop</button>
+            <button className='micButton' onClick={resetTranscript && SpeechRecognition.startListening}>Start</button>
+            {/* <button onClick={SpeechRecognition.stopListening}>Stop</button> */}
             {/* <button onClick={resetTranscript}>Reset</button> */}
             <p>{transcript ? transcript : 'Speak your answer into the microphone'}</p>
             <p>Your answer is: {transcript.toLocaleLowerCase() === answer ? 'Correct!' : 'Wrong...'}</p>

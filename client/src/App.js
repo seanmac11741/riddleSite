@@ -7,8 +7,7 @@ function App() {
       <header className="App-header">
 
         <p>
-          If you know the password then speak, friend, and enter...
-        </p>
+          What was once a tree, but never grows, where birds alight and power flows?</p>
         <p>{console.log(`React name: ${process.env.REACT_APP_NAME}`)}</p>
 
         < SpeechRec />
