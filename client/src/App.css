@@ -31,6 +31,7 @@
   text-align: center;
   transition: all 0.2s;
   background-color: 282c34;
+  font-size: 30px;
 }
 
 .micButton:hover {

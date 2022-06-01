@@ -40,7 +40,7 @@ echo
 
 
 echo "### Starting client ..."
-docker-compose up --force-recreate -d client
+docker-compose up --force-recreate --build -d client
 echo
 
 echo "### Deleting dummy certificate for $domains ..."
