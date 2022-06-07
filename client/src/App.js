@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
 
         <p>
-          What was once a tree, but never grows, where birds alight and power flows?</p>
+          What has a head, a tail, is brown, and has no legs?</p>
         <p>{console.log(`React name: ${process.env.REACT_APP_NAME}`)}</p>
 
         < SpeechRec />
