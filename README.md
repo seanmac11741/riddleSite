@@ -1,6 +1,6 @@
 # riddleSite
 
-## A website where you must speak to enter 
+## A website where you must speak to enter https://riddals.com/
 - [x] proof of concept 
 - [x] deploy to AWS 
 - [ ] Get ssl working and setup 
