@@ -34,18 +34,9 @@ docker-compose logs -f -t
 ```
 
 ### Deploy to AWS ECS 
-- Build images: 
+- Login to AWS instance of linux machine 
 ```bash 
-docker compose build
+cd riddleSite/
+sudo ./init-letsencrypt.sh
 ```
-- Push images to repo
-```bash 
-docker login
-docker compose push
-```
-- Run docker compose on ECS 
-```bash 
-docker context use myecscontext 
-docker compose up
-docker compose ps
-```
+-Output should say that it is up and running
